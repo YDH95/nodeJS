@@ -13,7 +13,6 @@ function login() {
         id : id.value,
         psword : psword.value 
     };
-
     fetch("/login", {
         method: "POST",
         headers: {
