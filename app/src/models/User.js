@@ -20,8 +20,15 @@ class User {
         return { success : false, msg : "아이디 틀림" };
     }
 
-    register() {
-        UserStorage.save(this.client);
+    async register() {
+        const client = this.body;
+        try {
+            const response = await UserStorage.save(client);
+            return response;
+        } catch (err) {
+            return { success : false, msg: err};
+        }
+
     }
 
 }
