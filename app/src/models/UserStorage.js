@@ -1,6 +1,7 @@
 "use strict";
 
 const fs = require("fs").promises;
+// const db = require("../config/db");
 
 class UserStorage {
     static #getUserInfo(data, id) {
